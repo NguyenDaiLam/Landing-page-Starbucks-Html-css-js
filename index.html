@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <title>Document</title>
+    <title>Starbucks</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" ><img src="assets/img/images/logo.png" class="logo" alt=""></a>
+            <ul>
+                <li><a href="#" class="menu">Home</a></li>
+                <li><a href="# "class="menu">Menu</a></li>
+                <li><a href="#"class="menu">What's New</a></li>
+                <li><a href="#"class="menu">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee <br>It's <span>Starbucks</span></h2>
+                <p>Starbucks là một thương hiệu cà phê nổi tiếng trên thế giới hiện nay. Hãng cà phê Starbucks được thành lập vào ngày 30 tháng 3 năm 1971 tại số 2000 Western Avenue (Washington). Ba người sáng lập đầu tiên của hãng starbucks coffee là Jerry Baldwin - giáo viên tiếng Anh, Zev Siegl - giáo viên lịch sử và Gordon Bowker - nhà văn.
+                Starbucks có trụ sở chính tại Seattle, Washington, Mỹ. Hiện nay hãng đã có mặt trên 49 quốc gia với 17.800 quán.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="/assets/img/images/img1.png" class="starbucks" alt="">               
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="assets/img/images/thumb1.png" onclick="imgSlider('/assets/img/images/img1.png');changeCircleColor('#017143')"  alt=""></li>
+            <li><img src="assets/img/images/thumb2.png" onclick="imgSlider('/assets/img/images/img2.png');changeCircleColor('#eb7495')"  alt=""></li>
+            <li><img src="assets/img/images/thumb3.png" onclick="imgSlider('/assets/img/images/img3.png');changeCircleColor('#d752b1')"  alt=""></li>
+        </ul>
+        <ul class="contact">
+            <li><img src="/assets/img/images/facebook.png" alt=""></li>
+            <li><img src="/assets/img/images/instagram.png" alt=""></li>
+            <li><img src="/assets/img/images/twitter.png" alt=""></li>
+
+        </ul>
+        
+    </section>
+    <script>
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+
+        }
+    </script>
 </body>
 </html>
